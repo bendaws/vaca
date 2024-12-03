@@ -1,0 +1,40 @@
+module math
+
+func math.slope(point1x: num, point1y: num, point2x: num, point2y: num):
+  return (point1y - point2y) / (point1x - point2x)
+;
+
+func math.sslope(point1x: num, point1y: num, point2x: num, point2y: num):
+  slope: num = (point1y - point2y) / (point1x - point2x)
+  formattedSlope: str = ""
+
+  if slope == 1:
+    formattedSlope = "x"
+  ; elif slope == 0:
+    formattedSlope = "0"
+  ; else:
+    formattedSlope = str.convert(slope) + "x"
+  ;
+
+  return "y = " + formattedSlope
+;
+
+func math.big():
+  return 99999999999999999999.99999999999999999999
+;
+
+func math.small():
+  return 0.000000001
+;
+
+func math.pi():
+  return 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803
+;
+
+func math.even(cmp: num):
+  if (cmp % 2) == 0:
+    return true
+  ; else:
+    return false
+  ;
+;
