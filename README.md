@@ -44,3 +44,23 @@ The standard library is imported by default and contains a pretty good amount of
 | ``math.big()``  | ``none``  | Returns a very big number. | ``num`` |
 | ``math.small()``  | ``none``  | Returns a very little number. | ``num`` |
 | ``math.pi()``  | ``(?rto)``  | Returns the estimated value of pi. ``rto`` is the decimal place to round to which is any number under 1000. | ``num`` |
+| ``math.round()``  | ``(number, ?decimal)``  | Returns the rounded value of ``number``. ``decimal`` signifies the decimal place to round to if not a whole number. | ``num`` |
+| ``math.slope()``  | ``(point1X, point1Y, point2X, point2Y)``  | Returns the slope of the linear equation that connects through (``point1X``, ``point1Y``) and (``point2X``, ``point2Y``). | ``num`` |
+| ``math.sslope()``  | ``(point1X, point1Y, point2X, point2Y)``  | Returns the y-intercept format of the linear equation that connects through (``point1X``, ``point1Y``) and (``point2X``, ``point2Y``). Example: ``y=1x+0`` | ``str`` |
+| ``math.even()``  | ``(number)``  | Returns ``true`` if the given number is even. | ``true``/``false`` |
+
+#### io
+| Function           | Arguments  | Description                                                                                              | Returns          |
+|--------------------|------------|----------------------------------------------------------------------------------------------------------|------------------|
+| ``io.write()``  | ``(string)``  | Prints the given string with no newline character. | ``null`` |
+| ``io.clear()``  | ``(none)``  | Clears the terminal the script is currently executing from. | ``null`` |
+
+#### Included standard library
+| Function           | Arguments  | Description                                                                                              | Returns          |
+|--------------------|------------|----------------------------------------------------------------------------------------------------------|------------------|
+| ``print()``  | ``(string)``  | Prints the given string including ``\n``. | ``null`` |
+| ``read()``  | ``(none)``  | Reads a string from the terminal. | ``str`` |
+| ``type()``  | ``(any)``  | Returns the given type of ``any`` in string format. | ``str`` |
+| ``import()``  | ``(string)``  | Require a module from file ``string``. | ``module``/``error`` |
+| ``warn()``  | ``(string)``  | Prints the given string including ``\n`` in orange color. | ``null`` |
+| ``error()``  | ``(string)``  | Prints the given string including ``\n`` in red color and closes the program with exit code ``1``. | ``null`` |
