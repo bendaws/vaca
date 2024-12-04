@@ -1,0 +1,42 @@
+module str
+
+import lua_string
+import lua_std
+
+func str.convert(obj: any):
+  if type(obj) == "str":
+    return obj
+  ; elif type(obj) == "num":
+    converted: string = lua_std.tostring(obj)
+    return converted
+  ; elif type(obj) == "bool":
+    if obj == true:
+      return "true"
+    ; elif obj == false:
+      return "false"
+    ;
+  ; else:
+    return nil
+  ;
+;
+
+func str.replace(fstring: str, foccr: str, frep: str):
+  result: string = lua_string.gsub(fstring, foccur, frep)
+  return result
+;
+
+func str.upper(fstring: str):
+  return lua_string.upper(fstring)
+;
+
+func str.lower(fstring: str):
+  return lua_string.lower(fstring)
+;
+
+func str.match(fstring: str, foccur: str):
+  if lua_string.find(fstring, foccur) ~= nil:
+    return true
+  ; else:
+    return false
+  ;
+;
