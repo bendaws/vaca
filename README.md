@@ -1,5 +1,5 @@
 # Stal
-Stal is an interpreted language The name comes from a mix of **Sta**ck and **L**ua.
+Stal is an interpreted language The name comes from a mix of **Sta**ck and **L**ua because it was originally a stack-based language written in Lua. It is now more general-purpose but the name stuck around.
 
 ## Code Sample
 ```lua
