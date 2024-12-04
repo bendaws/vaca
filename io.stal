@@ -1,0 +1,12 @@
+module io
+
+import lua_io
+import lua_os
+
+func io.write(fstring: str):
+  lua_io.write(fstring)
+;
+
+func io.clear():
+  lua_os.execute("clear")
+;
